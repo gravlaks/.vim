@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/torsteoe/.vim/plugged/YouCompleteMe'
+let g:netrw_dirhist_2='/home/torsteoe'
+let g:netrw_dirhist_3='/home/torsteoe/Documents'
+let g:netrw_dirhist_4='/home/torsteoe/Documents/TDT4102_Linux'
+let g:netrw_dirhist_5='/home/torsteoe/Documents/TDT4102_Linux/Graph_lib'
+let g:netrw_dirhist_6='/home/torsteoe/Documents/TDT4102_Linux/Graph_lib/include'
+let g:netrw_dirhist_7='/home/torsteoe'

@@ -1,3 +1,5 @@
+autocmd VimEnter * set t_ut=
+set termguicolors
 syntax on
 set noerrorbells
 set tabstop=4 softtabstop=4
@@ -17,7 +19,6 @@ set relativenumber
 call plug#begin('~/.vim/plugged')
 
 Plug 'ycm-core/YouCompleteMe'
-Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
@@ -25,6 +26,7 @@ Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
+Plug 'morhetz/gruvbox'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 
 call plug#end()
@@ -55,5 +57,4 @@ fun! GoYCM()
     nnoremap <buffer> <silent> <leader>gr :YcmCompleter GoToReferences<CR>
     nnoremap <buffer> <silent> <leader>rr :YcmCompleter RefactorRename<space>
 endfun
-colorscheme gruvbox
-set background=dark
+colorscheme airthings

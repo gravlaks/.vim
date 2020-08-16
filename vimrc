@@ -59,3 +59,7 @@ fun! GoYCM()
 endfun
 colorscheme airthings
 
+"Custom python header
+autocmd bufnewfile *.py 0r ~/.vim/python_header.
+autocmd bufnewfile *.py exe "1," . 11 . "g/File name:/s//File name: " .expand("%") 
+autocmd bufnewfile *.py exe "1," . 11 . "g/Creation date:/s//Creation Date: " .strftime("%a %d %b %Y")

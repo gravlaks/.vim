@@ -58,3 +58,4 @@ fun! GoYCM()
     nnoremap <buffer> <silent> <leader>rr :YcmCompleter RefactorRename<space>
 endfun
 colorscheme airthings
+

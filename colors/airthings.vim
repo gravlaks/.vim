@@ -11,7 +11,6 @@ if exists('syntax_on')
 endif
 
 
-set guifont=Avenir\ Next
 
 let g:colors_name = 'airthings'
 
@@ -132,9 +131,9 @@ call s:hi('SignColumn')
 
 call s:hi('Statement', s:light_yellow , s:default_bg, s:bold)
 call s:hi('PreProc', s:purity, s:default_bg, s:bold)
-call s:hi('String', s:atmosphere)
+call s:hi('String', s:light_blue)
 call s:hi('Comment', s:faded_yellow, s:default_bg, s:comment_attr)
-call s:hi('Constant', s:biosphere, s:default_bg)
+call s:hi('Constant', s:faded_green, s:default_bg)
 call s:hi('Type', s:light_yellow, s:default_bg, s:bold)
 call s:hi('Function', s:atmosphere)
 call s:hi('Identifier')

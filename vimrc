@@ -1,4 +1,5 @@
 autocmd VimEnter * set t_ut=
+au BufNewFile,BufRead Jenkinsfile setf groovy
 set termguicolors
 syntax on
 set noerrorbells
@@ -30,7 +31,7 @@ Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
 " Games for getting better
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-Plug 'tjdevries/train.nvim'
+Plug 'vim-scripts/groovy.vim'
 
 call plug#end()
 
@@ -59,5 +60,5 @@ colorscheme airthings
 
 "Custom python header
 autocmd bufnewfile *.py 0r ~/.vim/python_header.
-autocmd bufnewfile *.py exe "1," . 11 . "g/File name:/s//File name: " .expand("%") 
+autocmd bufnewfile *.py exe "1," . 11 . "g/File name:/s//File name: " .expand("%:t")
 autocmd bufnewfile *.py exe "1," . 11 . "g/Creation date:/s//Creation Date: " .strftime("%a %d %b %Y")

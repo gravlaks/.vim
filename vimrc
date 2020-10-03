@@ -13,6 +13,7 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 
+set path=$PWD/**
 let g:node_hose_prog = expand("~/.nvm/versions/node/v14.5.0/bin/node")
 set relativenumber
 
@@ -27,14 +28,11 @@ Plug 'lyuts/vim-rtags'
 Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
+" Games for getting better
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plug 'tjdevries/train.nvim'
 
 call plug#end()
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let mapleader = " "
-let g:netrw_browse_split = 2
-let g:netrw_banner = 0
-let g:netrw_winsize = 25
 
 let g:ctrlp_use_caching = 0
 nnoremap <leader>h :wincmd h<CR>

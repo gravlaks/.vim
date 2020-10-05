@@ -36,6 +36,7 @@ Plug 'vim-scripts/groovy.vim'
 call plug#end()
 
 let g:ctrlp_use_caching = 0
+let mapleader=" "
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>

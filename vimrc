@@ -3,8 +3,6 @@ au BufNewFile,BufRead Jenkinsfile setf groovy
 set termguicolors
 syntax on
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
 set smartindent
 set nu
 set smartcase
@@ -17,6 +15,13 @@ set incsearch
 set path=$PWD/**
 let g:node_hose_prog = expand("~/.nvm/versions/node/v14.5.0/bin/node")
 set relativenumber
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 
 call plug#begin('~/.vim/plugged')
 

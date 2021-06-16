@@ -2,6 +2,7 @@ autocmd VimEnter * set t_ut=
 set termguicolors
 syntax on
 set noerrorbells
+set visualbell
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set smartindent
@@ -12,13 +13,18 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set backspace=indent,eol,start
+
+"For vimwiki
+filetype plugin on 
+set nocompatible
 
 let g:node_hose_prog = expand("~/.nvm/versions/node/v14.5.0/bin/node")
 set relativenumber
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe' 
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
@@ -28,6 +34,7 @@ Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
@@ -35,6 +42,7 @@ let mapleader = " "
 let g:netrw_browse_split = 2
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
+
 
 let g:ctrlp_use_caching = 0
 nnoremap <leader>h :wincmd h<CR>

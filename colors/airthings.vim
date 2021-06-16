@@ -138,7 +138,7 @@ call s:hi('Type', s:light_yellow, s:default_bg, s:bold)
 call s:hi('Function', s:atmosphere)
 call s:hi('Identifier')
 call s:hi('Special')
-call s:hi('MatchParen', s:black, s:lgray)
+call s:hi('MatchParen', s:atmosphere, s:light_blue)
 
 
 "

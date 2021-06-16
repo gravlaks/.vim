@@ -1,4 +1,5 @@
 autocmd VimEnter * set t_ut=
+au BufNewFile,BufRead Jenkinsfile setf groovy
 set termguicolors
 syntax on
 set noerrorbells
@@ -19,8 +20,16 @@ set backspace=indent,eol,start
 filetype plugin on 
 set nocompatible
 
+set path=$PWD/**
 let g:node_hose_prog = expand("~/.nvm/versions/node/v14.5.0/bin/node")
 set relativenumber
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 
 call plug#begin('~/.vim/plugged')
 
@@ -33,18 +42,15 @@ Plug 'lyuts/vim-rtags'
 Plug 'git@github.com:kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
+" Games for getting better
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-Plug 'vimwiki/vimwiki'
+Plug 'vim-scripts/groovy.vim'
 
 call plug#end()
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let mapleader = " "
-let g:netrw_browse_split = 2
-let g:netrw_banner = 0
-let g:netrw_winsize = 25
 
 
 let g:ctrlp_use_caching = 0
+let mapleader=" "
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -69,5 +75,5 @@ colorscheme airthings
 
 "Custom python header
 autocmd bufnewfile *.py 0r ~/.vim/python_header.
-autocmd bufnewfile *.py exe "1," . 11 . "g/File name:/s//File name: " .expand("%") 
+autocmd bufnewfile *.py exe "1," . 11 . "g/File name:/s//File name: " .expand("%:t")
 autocmd bufnewfile *.py exe "1," . 11 . "g/Creation date:/s//Creation Date: " .strftime("%a %d %b %Y")
